@@ -42,6 +42,7 @@
 }
 
 .dropdown{
+    z-index: 1;
     position: absolute;
     width: 100%;
     background-color: white;
