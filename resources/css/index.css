@@ -1,4 +1,7 @@
 /* index.html 에서만 적용할 CSS Style 선언 */
+.animal-box {
+    margin-top: 20px;
+}
 .card-box {
     display: flex;
     justify-content: space-between;
@@ -44,4 +47,142 @@
     justify-content: space-evenly;
     align-items: center;
     border-top: 4px solid rgb(103, 196, 234);
+}
+
+.middle {
+    display: flex;
+}
+
+.center-introduce {
+    width: 50%;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.phone {
+    font-size: 30px;
+}
+
+.center-time {
+    width: 220px;
+    height: 70px;
+    border: 1px #777777;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #e7e7e794;
+}
+
+.time {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.lunch {
+    margin-top: 5px;
+}
+
+.line {
+    border-left: thin solid #777777;
+    height: 200px;
+    position: absolute;
+    top: 90%;
+    left: 22%;
+    
+}
+
+.volunteer {
+    width: 320px;
+    height: 130px;
+    border: 1px #777777;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #e7e7e794;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.volunteer-margin {
+    margin-left: 40px;
+}
+
+.volunteer-margin-bottom {
+    margin-bottom: 10px;
+}
+
+.park {
+    width: 50%;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color: #F0DCC4;
+}
+
+.box-space {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-left {
+    /* width: 300px;
+    height: 200px; */
+    border: 2px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.box-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBF4EC;
+    height: 50px;
+}
+
+.summer {
+    padding: 4px 12px;
+    background-color: rgb(209, 136, 0);
+    color: white;
+    font-weight: bold;
+    border-radius: 100px;
+    position: absolute;
+    top: 92%;
+    left: 58%;
+    /* transform: translate(-50%, 50%); */
+}
+
+.box-middle {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.text-size {
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+.boundary {
+    border-bottom: thin solid #c5c5c5;
+    width: 320px;
+    margin-left: 20px;
+    background-color: white;
+}
+
+.box-bottom {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 }
