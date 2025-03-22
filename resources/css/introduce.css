@@ -1,0 +1,136 @@
+.introduce {
+    display: flex;
+}
+
+.introduce-name {
+padding: 20px;
+}
+
+.introduce-top-box {
+    margin-top: 20px;
+}
+
+.introduce-top {
+    width: 200px;
+    margin-top: 20px; 
+    background-color: #0f8563;
+    overflow: hidden;
+    padding: 10px 10px;
+}
+
+.introduce-top-text {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.introduce-middle {
+    margin-top: 20px;
+}
+
+.introduce-middle-text {
+    font-size: 18px;
+    color: #777777;
+}
+
+.introduce-bottom {
+    margin-top: 20px;
+}
+
+.introduce-bottom-text {
+    font-size: 18px;
+    color: #777777;
+}
+
+.introduce-bottom-box {
+    padding: 35px;
+}
+
+.name {
+    width: 1350px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 20px;
+}
+
+.text-name {
+    font-size: 30px;
+}
+
+.name-detail {
+    display: flex;
+    border: 1px dashed #eeeeee;
+    margin-top: 30px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduce-img {
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.img {
+    width: 1350px;
+}
+
+.introduce-box {
+    width: 1380px;
+    margin-left: 255px;
+}
+
+.introduce-box-name {
+    display: flex;
+    padding: 20px 30px;
+}
+
+.introduce-box-address {
+    width: 100px;
+    border-top: 1px dashed black;
+    padding-top: 20px;
+}
+
+.introduce-box-adress-detail {
+    width: 1200px   ;
+    padding-top: 20px;
+    border-top: 1px dashed #777777;
+}
+
+.introduce-box-facilities {
+    display: flex;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.introduce-box-hours {
+    display: flex;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+.introduce-box-close {
+    display: flex;
+    padding-left: 30px;
+}
+
+.introduce-box-close-name {
+    width: 100px;
+    padding-top: 20px;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+
+.introduce-box-close-detail {
+    width: 1200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px dashed #777777;
+    border-bottom: 1px dashed #777777;
+    display: flex;
+    flex-direction: column;
+}
+
