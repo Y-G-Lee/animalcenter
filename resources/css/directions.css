@@ -17,16 +17,12 @@ padding-top: 15px;
 }
 
 .introduce-top {
-    width: 200px;
-    margin-top: 20px; 
-    background-color: #0f8563;
-    overflow: hidden;
-    padding: 10px 10px;
+    margin-top: 20px;
 }
 
 .introduce-top-text {
     text-decoration: none;
-    color: white;
+    color: #777777;
     font-size: 18px;
 }
 
@@ -41,13 +37,41 @@ padding-top: 15px;
 }
 
 .introduce-bottom {
-    margin-top: 20px;
+    width: 200px;
+    margin-top: 20px; 
+    background-color: #0f8563;
+    overflow: hidden;
+    padding: 10px 10px;
 }
 
 .introduce-bottom-text {
     font-size: 18px;
-    color: #777777;
+    color: white;
     text-decoration: none;
+}
+
+.introduce-bottom-box {
+    padding: 35px;
+}
+
+.name {
+    width: 1350px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 20px;
+}
+
+.text-name {
+    font-size: 30px;
+}
+
+.name-detail {
+    display: flex;
+    border: 1px dashed #eeeeee;
+    margin-top: 30px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .introduce-bottom-box {
@@ -73,18 +97,9 @@ padding-top: 15px;
     align-items: center;
 }
 
-.introduce-img {
-    background-color: #eeeeee;
-    padding: 15px;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.img {
-    width: 1350px;
+.directions-map {
+    width: 100%;
+    height: 500px;
 }
 
 .introduce-box {
@@ -98,15 +113,16 @@ padding-top: 15px;
 }
 
 .introduce-box-address {
-    width: 100px;
+    width: 200px;
     border-top: 1px dashed black;
     padding-top: 20px;
 }
 
 .introduce-box-adress-detail {
-    width: 1200px   ;
+    width: 1200px;
     padding-top: 20px;
     border-top: 1px dashed #777777;
+    padding-left: 30px;
 }
 
 .introduce-box-facilities {
@@ -126,7 +142,7 @@ padding-top: 15px;
 }
 
 .introduce-box-close-name {
-    width: 100px;
+    width: 200px;
     padding-top: 20px;
     border-top: 1px dashed black;
     border-bottom: 1px dashed black;
@@ -138,7 +154,9 @@ padding-top: 15px;
     padding-bottom: 20px;
     border-top: 1px dashed #777777;
     border-bottom: 1px dashed #777777;
-    display: flex;
-    flex-direction: column;
+    padding-left: 30px;
 }
 
+.directions-map {
+    margin-left: 250px;
+}
