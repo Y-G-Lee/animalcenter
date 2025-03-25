@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 유기동물 보호 정보 </title>
+
+    <!-- 공통 CSS 불러놓기 -->
+    <link rel="stylesheet" href="./resources/css/mystyle.css">
+    <!-- 공통 JS 불러놓기 -->
+    <script src="./resources/js/common.js"></script>
+
+    <link rel="stylesheet" href="./resources/css/protect.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="./index.html">
+                <img class="logo" src="./resources/img/로고.png" alt="">
+            </a>
+            <div class="menu-box">
+                <div class="menu">
+                    <a class="menu-title" href="./introduce.html"> 동물보호센터 </a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./introduce.html"> 동물보호센터 소개 </a>
+                        <a class="dropdown-item" href="./procedures.html"> 유기동물 보호 절차 </a>
+                        <a class="dropdown-item" href="./directions.html"> 오시는길 </a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a class="menu-title menu-color" href="./abandoned.html"> 동물보호정보 </a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./abandoned.html"> 유기동물 현황 </a>
+                        <a class="dropdown-item" href="./protect.html"> 유기동물 보호 정보 </a>
+                        <a class="dropdown-item" href=""> 입양절차 </a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a class="menu-title" href="./introduce.html"> 반려생활 길잡이 </a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./introduce.html"> 반려생활 길잡이 </a>
+                        <a class="dropdown-item" href=""> 반려동물 출입 식당 </a>
+                        <a class="dropdown-item" href=""> 자주 묻는 질문 </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="banner">
+            <img class="banner-img" src="./resources/img/배너.png" alt="">
+        </section>
+
+
+        <div class="introduce">
+            <div class="introduce-top-box">
+                <div class="introduce-name">
+                    <span class="introduce-title menu-color"> 동물보호정보 </span>
+                </div>
+                <div class="introduce-top">
+                    <a class="introduce-top-text" href="./abandoned.html"> 유기동물 현황 </a>
+                </div>
+                <div class="introduce-middle">
+                    <a class="introduce-middle-text" href="./protect.html"> 유기동물 보호정보 </a>
+                </div>
+                <div class="introduce-bottom">
+                    <a href="./.html" class="introduce-bottom-text"> 입양절차 </a>
+                </div>
+            </div>
+            <div class="introduce-bottom-box">
+                <div class="name">
+                    <span class="text-name text-bold"> 유기동물 보호 정보 </span>
+                </div>
+                <div class="option-box">
+                    <div class="all" id="all">
+                        <span> 전체 </span>
+                    </div>
+                    <div class="possible" id="possible">
+                        <span class="possible-text"> 입양가능 </span>
+                    </div>
+                    <div class="possible" id="dog">
+                        <span> 개 </span>
+                    </div>
+                    <div class="possible" id="cat">
+                        <span> 고양이 </span>
+                    </div>
+                    <div class="possible" id="other">
+                        <span> 기타동물 </span>
+                    </div>
+                </div>
+
+                <div class="select-box">
+                    <div class="select-top">
+                        <p class="select-type"> 종류 </p>
+                        <select name="" id="type" class="select-option-type">
+                            <option value="0"> 선택하세요 </option>
+                            <option value="1"> 개 </option>
+                            <option value="2"> 고양이 </option>
+                            <option value="3"> 기타동물 </option>
+                        </select>
+                        <p class="select-situation"> 상태 </p>
+                        <select name="" id="situation" class="select-option-situation">
+                            <option value="0"> 선택하세요 </option>
+                            <option value="1"> 공고중 </option>
+                            <option value="2"> 입양가능 </option>
+                            <option value="3"> 입양예정 </option>
+                            <option value="4"> 입양완료 </option>
+                            <option value="7"> 주인반환환 </option>
+                        </select>
+                        <p class="select-area"> 지역 </p>
+                        <select name="" id="area" class="select-option-area">
+                            <option value="0"> 선택하세요 </option>
+                            <option value="1"> 동구 </option>
+                            <option value="2"> 서구 </option>
+                            <option value="3"> 유성구 </option>
+                            <option value="4"> 대덕구 </option>
+                        </select>
+                        <p class="select-gender"> 성별 </p>
+                        <select name="" id="gender" class="select-option-gender">
+                            <option value="0"> 선택하세요 </option>
+                            <option value="1"> 암컷 </option>
+                            <option value="2"> 수컷 </option>
+                        </select>
+                    </div>
+
+                    <div class="select-bottom">
+                        <select name="" id="" class="select-bottom-option">
+                            <option value=""> --전체-- </option>
+                            <option value=""> 품종 </option>
+                            <option value=""> 기타사항 </option>
+                            <option value=""> 관리번호 </option>
+                            <option value=""> 공고번호 </option>
+                        </select>
+                        <input type="text" class="input-box" id="inputSearch"> <button class="search-btn" onclick="searchBtn()"> 검색 </button>
+                    </div>
+                </div>
+                <div class="card-box">
+                </div>
+                <div class="paging-box">
+                    <a class="first-page" href="javascript:goFirst()"> &lt;&lt; </a>
+                    <a class="first-page" href="javascript:previous()"> &lt; </a>
+                    <a href="#" class="active"> 1 </a>
+                    <!-- 클릭시 자바스크립트 함수 실행 -->
+                    <a href="javascript:goPage(2)"> 2 </a>
+                    <a href="javascript:goPage(3)"> 3 </a>
+                    <a href="javascript:goPage(4)"> 4 </a>
+                    <a href="javascript:goPage(5)"> 5 </a>
+                    <a href="javascript:goPage(6)"> 6 </a>
+                    <a href="javascript:goPage(7)"> 7 </a>
+                    <a href="javascript:goPage(8)"> 8 </a>
+                    <a href="javascript:goPage(9)"> 9 </a>
+                    <a href="javascript:goPage(10)"> 10 </a>
+                    <a class="first-page" href="javascript:next()"> &gt; </a>
+                    <a class="first-page" href="javascript:goLast()" title="마지막 페이지"> &gt;&gt; </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="notice">
+                <div class="notice-left">
+                    <span class="text-margin-left text-detail text-bold"> 개인정보처리방침 </span>
+                </div>
+                <div class="notice-left-middle">
+                    <span class="text-margin-left text-detail text-bold"> 영상정보처리기기 운영·관리방침 </span>
+                </div>
+                <div class="notice-middle">
+                    <span class="text-margin-left text-detail text-bold"> 누리집 개선의견 </span>
+                </div>
+                <div class="notice-right">
+                    <span class="text-bold text-detail text-margin-right"> 오시는 길 </span>
+                </div>
+            </div>
+
+            <div class="address">
+                <span class="text-notice text-notice-bottom"> (34001) 대전광역시 유성구 금고길 7(금고동) 대전반려동물공원 </span>
+                <span class="text-notice text-notice-margin-bottom"> (34001) 대전광역시 유성구 금남구즉로 1234(금고동) 대전동물보호센터
+                    / 대표전화
+                    (042) 270-7239 / 팩스번호 (042) 270-7224 </span>
+                <span class="text-notice"> COPYRIGHT 2023 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./resources/js/protect.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
+</body>
+
+</html>

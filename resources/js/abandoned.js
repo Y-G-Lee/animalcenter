@@ -20,7 +20,6 @@ function sendAjax() {
         console.log(json);
 
         if (!finalPage) {
-            let toralCount = json["ServiceResult"]["msgHeader"]["totalCount"];
             finalPage = json["ServiceResult"]["msgHeader"]["totalPage"];
         }
 
