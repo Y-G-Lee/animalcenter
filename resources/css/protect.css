@@ -181,6 +181,7 @@ padding-top: 15px;
     width: 1350px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 .card {
@@ -249,10 +250,11 @@ padding-top: 15px;
 .paging-box {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
 }
 
 .paging-box>a {
-    padding: 16px;
+    padding: 10px;
     color: black;
     text-decoration: none;
     border: 1px solid #777777;
@@ -266,7 +268,7 @@ padding-top: 15px;
 }
 
 .first-page {
-    padding: 16px;
+    padding: 10px;
     color: #777777 !important;
     background-color: #F4F4F4;
     border: thin solid #777777 !important;

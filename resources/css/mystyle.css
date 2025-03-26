@@ -139,7 +139,7 @@
 }
 
 .bottom-bar {
-    width: 100%;
+    width: 1600px;
     background-color: #3B414D;
     display: flex;
     flex-direction: column;

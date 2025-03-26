@@ -31,7 +31,7 @@ function sendAjax() {
             for (let i = 0; i < items.length; i++) {
                 allItemArray.push(items[i]);
             }
-
+            
             pageNo++;
 
             sendAjax();

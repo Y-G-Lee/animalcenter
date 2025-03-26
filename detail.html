@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 유기동물 상세 정보보 </title>
+    <title> 유기동물 상세 정보 </title>
 
     <!-- 공통 CSS 불러놓기 -->
     <link rel="stylesheet" href="./resources/css/mystyle.css">
@@ -35,14 +35,14 @@
                     <div class="dropdown">
                         <a class="dropdown-item" href="./abandoned.html"> 유기동물 현황 </a>
                         <a class="dropdown-item" href="./protect.html"> 유기동물 보호 정보 </a>
-                        <a class="dropdown-item" href=""> 입양절차 </a>
+                        <a class="dropdown-item" href="./procedure.html"> 입양절차 </a>
                     </div>
                 </div>
 
                 <div class="menu">
-                    <a class="menu-title" href="./introduce.html"> 반려생활 길잡이 </a>
+                    <a class="menu-title" href="./guide.html"> 반려생활 길잡이 </a>
                     <div class="dropdown">
-                        <a class="dropdown-item" href="./introduce.html"> 반려생활 길잡이 </a>
+                        <a class="dropdown-item" href="./guide.html"> 반려생활 길잡이 </a>
                         <a class="dropdown-item" href=""> 반려동물 출입 식당 </a>
                         <a class="dropdown-item" href=""> 자주 묻는 질문 </a>
                     </div>
@@ -53,7 +53,6 @@
         <section class="banner">
             <img class="banner-img" src="./resources/img/배너.png" alt="">
         </section>
-
 
         <div class="introduce">
             <div class="introduce-top-box">
@@ -67,40 +66,52 @@
                     <a class="introduce-middle-text" href="./protect.html"> 유기동물 보호정보 </a>
                 </div>
                 <div class="introduce-bottom">
-                    <a href="./.html" class="introduce-bottom-text"> 입양절차 </a>
+                    <a href="./procedure.html" class="introduce-bottom-text"> 입양절차 </a>
                 </div>
             </div>
             <div class="introduce-bottom-box">
                 <div class="name">
                     <span class="text-name text-bold"> 유기동물 보호 정보 </span>
                 </div>
+
+                <div class="detail">
+                </div>
+            </div>
+        </div>
+        <button class="inventory-btn" id="inventoryBtn">
+            <img class="inventory-img" src="./resources/img/hambuger-menu.svg" alt="">
+            <a href="./protect.html" class="inventory-text text-bold"> 목록 </a>
+        </button>
+
+
+        <div class="bottom-bar">
+            <div class="notice">
+                <div class="notice-left">
+                    <span class="text-margin-left text-detail text-bold"> 개인정보처리방침 </span>
+                </div>
+                <div class="notice-left-middle">
+                    <span class="text-margin-left text-detail text-bold"> 영상정보처리기기 운영·관리방침 </span>
+                </div>
+                <div class="notice-middle">
+                    <span class="text-margin-left text-detail text-bold"> 누리집 개선의견 </span>
+                </div>
+                <div class="notice-right">
+                    <span class="text-bold text-detail text-margin-right"> 오시는 길 </span>
+                </div>
+            </div>
+            <div class="address">
+                <span class="text-notice text-notice-bottom"> (34001) 대전광역시 유성구 금고길 7(금고동) 대전반려동물공원 </span>
+                <span class="text-notice text-notice-margin-bottom"> (34001) 대전광역시 유성구 금남구즉로 1234(금고동) 대전동물보호센터
+                    / 대표전화
+                    (042) 270-7239 / 팩스번호 (042) 270-7224 </span>
+                <span class="text-notice"> COPYRIGHT 2023 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.
+                </span>
             </div>
         </div>
     </div>
-    <div class="bottom-bar">
-        <div class="notice">
-            <div class="notice-left">
-                <span class="text-margin-left text-detail text-bold"> 개인정보처리방침 </span>
-            </div>
-            <div class="notice-left-middle">
-                <span class="text-margin-left text-detail text-bold"> 영상정보처리기기 운영·관리방침 </span>
-            </div>
-            <div class="notice-middle">
-                <span class="text-margin-left text-detail text-bold"> 누리집 개선의견 </span>
-            </div>
-            <div class="notice-right">
-                <span class="text-bold text-detail text-margin-right"> 오시는 길 </span>
-            </div>
-        </div>
-        <div class="address">
-            <span class="text-notice text-notice-bottom"> (34001) 대전광역시 유성구 금고길 7(금고동) 대전반려동물공원 </span>
-            <span class="text-notice text-notice-margin-bottom"> (34001) 대전광역시 유성구 금남구즉로 1234(금고동) 대전동물보호센터
-                / 대표전화
-                (042) 270-7239 / 팩스번호 (042) 270-7224 </span>
-            <span class="text-notice"> COPYRIGHT 2023 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.
-            </span>
-        </div>
-    </div>
+
+    <script src="./resources/js/detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
 </body>
 
 </html>

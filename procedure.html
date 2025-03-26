@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 유기동물 보호 정보 </title>
+    <title> 입양절차 </title>
 
     <!-- 공통 CSS 불러놓기 -->
     <link rel="stylesheet" href="./resources/css/mystyle.css">
     <!-- 공통 JS 불러놓기 -->
     <script src="./resources/js/common.js"></script>
 
-    <link rel="stylesheet" href="./resources/css/protect.css">
+    <link rel="stylesheet" href="./resources/css/procedure.css">
 </head>
 
 <body>
@@ -54,7 +54,6 @@
             <img class="banner-img" src="./resources/img/배너.png" alt="">
         </section>
 
-
         <div class="introduce">
             <div class="introduce-top-box">
                 <div class="introduce-name">
@@ -72,92 +71,83 @@
             </div>
             <div class="introduce-bottom-box">
                 <div class="name">
-                    <span class="text-name text-bold"> 유기동물 보호 정보 </span>
+                    <span class="text-name text-bold"> 입양절차 </span>
                 </div>
-                <div class="option-box">
-                    <div class="all" id="all">
-                        <span> 전체 </span>
-                    </div>
-                    <div class="possible" id="possible">
-                        <span class="possible-text"> 입양가능 </span>
-                    </div>
-                    <div class="possible" id="dog">
-                        <span> 개 </span>
-                    </div>
-                    <div class="possible" id="cat">
-                        <span> 고양이 </span>
-                    </div>
-                    <div class="possible" id="other">
-                        <span> 기타동물 </span>
-                    </div>
+                <div class="name-detail">
+                    <img src="./resources/img/느낌표 이미지.png" alt="">
+                    <p class="text-sub-title"> 대전동물보호센터는 사람과 동물이 새로운 가족으로 만나 아름다운 동행이 시작되는 공간입니다.</p>
                 </div>
-
-                <div class="select-box">
-                    <div class="select-top">
-                        <p class="select-type"> 종류 </p>
-                        <select name="" id="type" class="select-option-type">
-                            <option value="0"> 선택하세요 </option>
-                            <option value="1"> 개 </option>
-                            <option value="2"> 고양이 </option>
-                            <option value="3"> 기타동물 </option>
-                        </select>
-                        <p class="select-situation"> 상태 </p>
-                        <select name="" id="situation" class="select-option-situation">
-                            <option value="0"> 선택하세요 </option>
-                            <option value="1"> 공고중 </option>
-                            <option value="2"> 입양가능 </option>
-                            <option value="3"> 입양예정 </option>
-                            <option value="4"> 입양완료 </option>
-                            <option value="7"> 주인반환 </option>
-                        </select>
-                        <p class="select-area"> 지역 </p>
-                        <select name="" id="area" class="select-option-area">
-                            <option value="0"> 선택하세요 </option>
-                            <option value="1"> 동구 </option>
-                            <option value="2"> 서구 </option>
-                            <option value="3"> 유성구 </option>
-                            <option value="4"> 대덕구 </option>
-                        </select>
-                        <p class="select-gender"> 성별 </p>
-                        <select name="" id="gender" class="select-option-gender">
-                            <option value="0"> 선택하세요 </option>
-                            <option value="1"> 암컷 </option>
-                            <option value="2"> 수컷 </option>
-                        </select>
+                <div class="adoption-box">
+                    <div class="check">
+                        <div class="check-img">
+                            <img class="cat-dog-img" src="./resources/img/cat-dog-removebg-preview.png" alt="">
+                        </div>
+                        <div class="check-text">
+                            <span class="check-text-title"> 1. 입양가능 동물 확인 </span>
+                            <span class="check-text-detail"> 대전동물보호센터 "보호동물"을 확인합니다. </span>
+                        </div>
                     </div>
 
-                    <div class="select-bottom">
-                        <select name="" id="" class="select-bottom-option">
-                            <option value=""> --전체-- </option>
-                            <option value=""> 품종 </option>
-                            <option value=""> 기타사항 </option>
-                            <option value=""> 관리번호 </option>
-                            <option value=""> 공고번호 </option>
-                        </select>
-                        <input type="text" class="input-box" id="inputSearch"> <button class="search-btn" onclick="sendAjax()"> 검색 </button>
+                    <div class="arrow">
+                        <img class="arrow-img" src="./resources/img/arrowdown-removebg.png" alt="">
                     </div>
-                </div>
-                <div class="card-box">
-                </div>
-                <div class="paging-box">
-                    <a class="first-page" href="javascript:goFirst()"> &lt;&lt; </a>
-                    <a class="first-page" href="javascript:previous()"> &lt; </a>
-                    <a href="#" class="active"> 1 </a>
-                    <!-- 클릭시 자바스크립트 함수 실행 -->
-                    <a href="javascript:goPage(2)"> 2 </a>
-                    <a href="javascript:goPage(3)"> 3 </a>
-                    <a href="javascript:goPage(4)"> 4 </a>
-                    <a href="javascript:goPage(5)"> 5 </a>
-                    <a href="javascript:goPage(6)"> 6 </a>
-                    <a href="javascript:goPage(7)"> 7 </a>
-                    <a href="javascript:goPage(8)"> 8 </a>
-                    <a href="javascript:goPage(9)"> 9 </a>
-                    <a href="javascript:goPage(10)"> 10 </a>
-                    <a class="first-page" href="javascript:next()"> &gt; </a>
-                    <a class="first-page" href="javascript:goLast()" title="마지막 페이지"> &gt;&gt; </a>
+
+                    <div class="education">
+                        <div class="education-img">
+                            <img class="cat-dog-img" src="./resources/img/checklist-removebg.png" alt="">
+                        </div>
+                        <div class="check-text">
+                            <span class="check-text-title"> 2. 입양 전 교육 </span>
+                            <span class="check-text-detail"> 입양을 희망하시는 분은 "입양자 교육"을 이수해 주세요. </span>
+                        </div>
+                        <button class="education-btn"> 입양자 교육 바로가기 &rarr; </button>
+                    </div>
+
+                    <div class="arrow">
+                        <img class="arrow-img" src="./resources/img/arrowdown-removebg.png" alt="">
+                    </div>
+
+                    <div class="education">
+                        <div class="education-img">
+                            <img class="cat-dog-img" src="./resources/img/history-removebg-preview.png" alt="">
+                        </div>
+                        <div class="check-text">
+                            <span class="check-text-title"> 3. 입양신청 </span>
+                            <span class="check-text-detail"> "입양가능"에서 동물을 선택 후 입양신청을 통해 방문 예정일과 시간을 선택하여 신청해주세요.(입양신청 후 방문일자는 수정이 불가합니다.) </span>
+                        </div>
+                    </div>
+
+                    <div class="arrow">
+                        <img class="arrow-img" src="./resources/img/arrowdown-removebg.png" alt="">
+                    </div>
+
+                    <div class="education">
+                        <div class="education-img">
+                            <img class="cat-dog-img margin-top" src="./resources/img/inteview-removebg-preview.png" alt="">
+                        </div>
+                        <div class="check-text">
+                            <span class="check-text-title"> 4. 방문상담 및 입양 </span>
+                            <span class="check-text-detail"> 입양신청 시 선택한 날짜와 시간에 맞춰 방문하여 상담 후 입양여부 결정 </span>
+                        </div>
+                    </div>
+
+                    <div class="arrow">
+                        <img class="arrow-img" src="./resources/img/arrowdown-removebg.png" alt="">
+                    </div>
+
+                    <div class="education">
+                        <div class="education-img">
+                            <img class="cat-dog-img margin-top" src="./resources/img/review-removebg-preview.png" alt="">
+                        </div>
+                        <div class="check-text">
+                            <span class="check-text-title"> 5. 입양 후기 공유 </span>
+                            <span class="check-text-detail"> "입양후기" 게시판에 입양된 동물의 행복한 일상을 공유해주세요. </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="bottom-bar">
             <div class="notice">
                 <div class="notice-left">
@@ -173,7 +163,6 @@
                     <span class="text-bold text-detail text-margin-right"> 오시는 길 </span>
                 </div>
             </div>
-
             <div class="address">
                 <span class="text-notice text-notice-bottom"> (34001) 대전광역시 유성구 금고길 7(금고동) 대전반려동물공원 </span>
                 <span class="text-notice text-notice-margin-bottom"> (34001) 대전광역시 유성구 금남구즉로 1234(금고동) 대전동물보호센터
@@ -184,9 +173,7 @@
             </div>
         </div>
     </div>
-
-    <script src="./resources/js/protect.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
+    <script src="./resources/js/procedure.js"></script>
 </body>
 
 </html>

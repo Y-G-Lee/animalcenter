@@ -8,7 +8,7 @@
 }
 
 .introduce-name {
-padding-top: 15px;
+    padding-top: 15px;
 }
 
 .introduce-title {
@@ -28,7 +28,7 @@ padding-top: 15px;
 
 .introduce-middle {
     width: 200px;
-    margin-top: 20px; 
+    margin-top: 20px;
     background-color: #0f8563;
     overflow: hidden;
     padding: 10px 10px;
@@ -62,4 +62,82 @@ padding-top: 15px;
 
 .text-name {
     font-size: 30px;
+}
+
+.detail-img-box {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: thin solid #cfcece;
+    background-color: #eeeeee;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.detail-img {
+    width: 600px;
+    height: 600px;
+}
+
+.detail-box {
+    width: 1000px;
+    height: 900px;
+    border-top: 2px solid black;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.detail-box-top {
+    display: flex;
+    border-bottom: thin solid rgb(153, 153, 153);
+}
+.title {
+    width: 150px;
+    height: 59px;
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+}
+
+.title-text {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.title-detail {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.title-detail-text {
+    margin-left: 15px;
+}
+
+.inventory-btn {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    margin-left: 1300px;
+    background-color: #5C5C5C;
+    cursor: pointer;
+}
+
+.inventory-img {
+    width: 50%;
+    height: 50%;
+    margin-top: 10px;
+}
+
+.inventory-text {
+    text-decoration: none;
+    margin-top: 8px;
+    color: white;
+    font-size: 16px;
+}
+.inventory-btn:hover {
+    background-color: #333333;
 }

@@ -12,28 +12,39 @@ let cat = document.getElementById("cat");
 let other = document.getElementById("other");
 
 function sendAjax() {
-    // let type = document.getElementById("type").value;
-    // let situation = document.getElementById("situation").value;
-    // let area = document.getElementById("area").value;
-    // let gender = document.getElementById("gender").value;
-    let inputSearch = document.getElementById("inputSearch").value;
+    const $inputSearch = document.getElementById("inputSearch");
+    const $type = document.getElementById('type');
+    const $situation = document.getElementById("situation");
+    const $area = document.getElementById("area");
+    const $gender = document.getElementById("gender");
+
+
+
     var xhr = new XMLHttpRequest();
     var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
     queryParams += '&pageNo=' + pageNo; /**/
     queryParams += '&numOfRows=' + itemCountPerPage; /**/
 
-    if (inputSearch) {
-        queryParams += "&searchKeyword=" + inputSearch;
-    } //else if(type) {
-    //     queryParams += "&searchCondition=" + type;
-    // }else if(situation) {
-    //     queryParams += "&searchCondition3=" + situation;
-    // }else if(area) {
-    //     queryParams += "&searchCondition2=" + area;
-    // }else if(gender) {
-    //     queryParams += "&gubun=" + gender;
-    // }
+    if ($inputSearch.value) {
+        queryParams += "&searchKeyword=" + $inputSearch.value;
+    }
+
+    if ($type.value !== '0') {
+        queryParams += "&searchCondition=" + $type.value;
+    }
+
+    if ($situation.value !== '0') {
+        queryParams += "&searchCondition3=" + $situation.value;
+    }
+
+    if ($area.value !== '0') {
+        queryParams += "&searchCondition2=" + $area.value;
+    }
+
+    if ($gender.value !== '0') {
+        queryParams += "&gubun=" + $gender.value;
+    }
 
     
     xhr.open('GET', url + queryParams);
@@ -340,16 +351,9 @@ other.addEventListener("click", () => {
     xhr.send();
 });
 
-function searchBtn() {
-    
-
-    console.log(type);
-    console.log(situation);
-    console.log(area);
-    console.log(gender);
-
-    sendAjax();
-}
+// function searchBtn() {
+//     sendAjax();
+// }
 
 function goPage(no) {
     console.log(no);
@@ -432,9 +436,12 @@ function goFirst() {
 }
 
 function goDetail() {
-    let regId = event.currentTarget.dataset["regId"];
+    console.log(event.currentTarget);
+    console.log(event.currentTarget.dataset);
+    let regId = event.currentTarget.dataset["regid"];
+    console.log(regId);
 
-    open("./detail.html?q=" + regId);
+    location.href = "./detail.html?regId=" + regId;
 }
 
 document.get
