@@ -2,7 +2,6 @@
     display: flex;
 }
 
-
 .introduce-top-box {
     margin-top: 20px;
 }
@@ -29,7 +28,7 @@
 .introduce-middle {
     width: 200px;
     margin-top: 20px;
-    background-color: #0f8563;
+    background-color: #13a478;
     overflow: hidden;
     padding: 10px 10px;
 }

@@ -403,7 +403,7 @@ function next() {
 
     sendAjax();
 
-    pageNo++;
+    // pageNo++;
 }
 
 function previous() {
@@ -423,7 +423,7 @@ function goLast() {
     drawPage();
 
     sendAjax();
-    pageNo++;
+    // pageNo++;
 }
 
 function goFirst() {
@@ -432,7 +432,7 @@ function goFirst() {
     drawPage();
 
     sendAjax();
-    pageNo++;
+    // pageNo++;
 }
 
 function goDetail() {

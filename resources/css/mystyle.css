@@ -42,7 +42,7 @@
 }
 
 .menu-title:hover {
-    color: #0f8563;
+    color: #13A47B;
 } 
 
 .dropdown{
@@ -58,7 +58,7 @@
     padding: 8px;
     box-sizing: border-box;
     display: none;
-    border-top: 2px solid #0f8563;
+    border-top: 2px solid #13A47B;
 }
 
 .dropdown-item{
@@ -69,8 +69,12 @@
 }
 
 .dropdown-item:hover {
-    color: #0f8563;
+    color: #13A47B;
     text-decoration: underline;
+}
+
+.menu:hover > .menu-title {
+    color: #13A47B;
 }
 
 .text-bold {
@@ -94,7 +98,7 @@
 }
 
 .text-color {
-    color: #0f8563;
+    color: #13A47B;
 }
 .text-margin-top {
     margin-top: 20px;
@@ -183,5 +187,5 @@
 }
 
 .menu-color {
-    color: #0f8563;
+    color: #13A47B;
 }

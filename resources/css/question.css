@@ -1,0 +1,130 @@
+.introduce {
+    display: flex;
+}
+
+
+.introduce-top-box {
+    margin-top: 20px;
+}
+
+.introduce-name {
+    padding-top: 15px;
+}
+
+.introduce-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.introduce-top {
+    margin-top: 20px;
+}
+
+.introduce-top-text {
+    text-decoration: none;
+    color: #777777;
+    font-size: 18px;
+}
+
+.introduce-middle {
+    margin-top: 20px;
+}
+
+.introduce-middle-text {
+    font-size: 18px;
+    color: #777777;
+    text-decoration: none;
+}
+
+.introduce-bottom {
+    width: 200px;
+    margin-top: 20px;
+    background-color: #13A47B;
+    overflow: hidden;
+    padding: 10px 10px;
+}
+
+.introduce-bottom-text {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.introduce-bottom-box {
+    padding: 35px;
+}
+
+.name {
+    width: 1350px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 20px;
+}
+
+.text-name {
+    font-size: 30px;
+}
+
+/* 아코디언 버튼 스타일 */
+.accordion {
+    background-color: white;
+    /* 기본 배경색 */
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    /* 배경색 변경 효과 */
+    border-bottom: thin solid #e7e7e7;
+    display: flex;
+    align-items: center;
+}
+
+/* 클릭된 아코디언 버튼의 스타일 */
+.accordion.active-button {
+    background-color: #13A47B;
+    /* 클릭된 버튼의 배경색 */
+    color: white;
+    /* 클릭된 버튼의 텍스트 색 */
+}
+
+/* 패널 숨기기 */
+.panel {
+    padding: 20px 22px;
+    display: none;
+    /* 기본적으로 숨기기 */
+    background-color: #f1f1f1;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+/* active 클래스가 있을 때 패널을 보여줍니다 */
+.panel.active {
+    display: block;
+}
+
+.accordion-text {
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #13A47B;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.text {
+    font-size: 16px;
+}
+
+.underline-none {
+    text-decoration: none;
+    color: black;
+}

@@ -39,7 +39,7 @@
 .introduce-bottom {
     width: 200px;
     margin-top: 20px;
-    background-color: #0f8563;
+    background-color: #13A478;
     overflow: hidden;
     padding: 10px 10px;
 }
@@ -166,7 +166,7 @@
 }
 
 .education-btn:hover {
-    background-color: #0f8563;
+    background-color: #13A478;
 }
 
 .margin-top {

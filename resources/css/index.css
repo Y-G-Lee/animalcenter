@@ -28,6 +28,11 @@
     height: 100%;
 }
 
+.card-img:hover {
+    transform: scale(120%);
+    cursor: pointer;
+}
+
 .card-state {
     padding: 4px 12px;
     background-color: rgb(103, 196, 234);
