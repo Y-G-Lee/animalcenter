@@ -31,8 +31,9 @@ xhr.onload = function () {
     // document.getElementById("age").innerHTML = items["age"];
     // document.getElementById("weight").innerHTML = items["weight"];
 
+    let imgSrc = items["filePath"] ? "https://www.daejeon.go.kr/" + items["filePath"] : "./resources/img/thumb_no_img.png";
     let str = `<div class="detail-img-box">
-                        <img class="detail-img" id="filePath" src="http://www.daejeon.go.kr/${items["filePath"]}"
+                        <img class="detail-img" id="filePath" src="${imgSrc}"
                             alt="">
                     </div>
                     <div class="detail-box">

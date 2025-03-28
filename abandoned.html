@@ -82,15 +82,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="spinner-background d-none">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div id="count"></div>
+                </div>
             </div>
         </div>
         <div class="chart-container" id="pdfContent">
             <div class="chart-row">
-                    <canvas id="barChart"></canvas>
-                    <canvas id="pieChart"></canvas>
+                <canvas id="barChart"></canvas>
+                <canvas id="pieChart"></canvas>
             </div>
             <div class="chart-row">
-            <canvas id="lineChart"></canvas>
+                <canvas id="lineChart"></canvas>
             </div>
         </div>
 
@@ -124,7 +130,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"
         integrity="sha512-5yTVoG0jFRsDhgYEoKrZCj5Bazxqa0VnETLN7k0SazQcARBsbgrSb6um+YpzWKNKV2kjb8bhna4fDfOk3YPr4Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>

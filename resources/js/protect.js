@@ -66,11 +66,11 @@ function sendAjax() {
         document.querySelector(".card-box").innerHTML = "";
 
         for (let i = 0; i < items.length; i++) {
-            let imgSrc = items[i]["filePath"];
+            let imgSrc = items[i]["filePath"] ? "https://www.daejeon.go.kr/" + items[i]["filePath"] : "./resources/img/thumb_no_img.png";
             let state = stateCd2Str(items[i]["adoptionStatusCd"]);
             let str = `<div class="card" data-regid="${items[i]["regId"]}" onclick="goDetail()">
                             <div class="card-top">
-                                <img src="https://www.daejeon.go.kr/${imgSrc}" alt="">
+                                <img src="${imgSrc}" alt="">
                                 <div class="card-state ${state.className}"> ${state.text} </div>
                             </div>
                             <div class="card-bottom">

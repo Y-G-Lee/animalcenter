@@ -4,6 +4,8 @@ let pageNo = 1;
 
 let finalPage;
 function sendAjax() {
+    document.querySelector(".spinner-background").classList.remove("d-none");
+
     var xhr = new XMLHttpRequest();
 
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -32,6 +34,8 @@ function sendAjax() {
                 allItemArray.push(items[i]);
             }
 
+            document.getElementById("count").innerHTML = pageNo + "/" + finalPage;
+
             pageNo++;
 
             sendAjax();
@@ -39,6 +43,9 @@ function sendAjax() {
             console.log(allItemArray);
 
             statics();
+
+            // 스피너 제거
+            document.querySelector(".spinner-background").classList.add("d-none");
         }
 
     }
