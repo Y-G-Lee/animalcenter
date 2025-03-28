@@ -184,6 +184,13 @@ padding-top: 15px;
     flex-wrap: wrap;
     margin-top: 50px;
     justify-content: space-between;
+    margin-left: 60px;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transition: border 0.3s ease;
+    cursor: pointer;
 }
 
 .card {
@@ -214,7 +221,7 @@ padding-top: 15px;
 
 .card-state {
     padding: 4px 12px;
-    background-color: #F5840C;
+    /* background-color: #F5840C; */
     color: white;
     font-weight: bold;
     border-radius: 10px;
@@ -223,7 +230,6 @@ padding-top: 15px;
     top: 5px;
     transform: translate(10%, 10%);
 }
-
 .card-bottom {
     flex-grow: 1;
     display: flex;
@@ -278,4 +284,48 @@ padding-top: 15px;
     color: #777777 !important;
     background-color: #F4F4F4;
     border: thin solid #777777 !important;
+}
+
+.download {
+    display: flex;
+    justify-content: end;
+    margin-right: 100px;
+}
+
+.download-bg {
+    background-color: #e2e2e2;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.download-btn {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.download-img {
+    width: 30px;
+}
+
+.card-state.announcement {
+    background-color: #F5840C;
+}
+
+.card-state.adoptable {
+    background-color: #397DCE;
+}
+
+.card-state.pending {
+    background-color: #F35569;
+}
+
+.card-state.adopted {
+    background-color: 13A478;
+}
+
+.card-state.returned {
+    background-color: #dc3545;
 }

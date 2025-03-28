@@ -21,7 +21,7 @@ function sendAjax() {
 
 
     var xhr = new XMLHttpRequest();
-    var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
     queryParams += '&pageNo=' + pageNo; /**/
     queryParams += '&numOfRows=' + itemCountPerPage; /**/
@@ -46,7 +46,7 @@ function sendAjax() {
         queryParams += "&gubun=" + $gender.value;
     }
 
-    
+
     xhr.open('GET', url + queryParams);
     xhr.onload = function () {
         console.log(xhr.response);
@@ -67,10 +67,11 @@ function sendAjax() {
 
         for (let i = 0; i < items.length; i++) {
             let imgSrc = items[i]["filePath"];
+            let state = stateCd2Str(items[i]["adoptionStatusCd"]);
             let str = `<div class="card" data-regid="${items[i]["regId"]}" onclick="goDetail()">
                             <div class="card-top">
                                 <img src="https://www.daejeon.go.kr/${imgSrc}" alt="">
-                                <div class="card-state"> ${stateCd2Str(items[i]["adoptionStatusCd"])} </div>
+                                <div class="card-state ${state.className}"> ${state.text} </div>
                             </div>
                             <div class="card-bottom">
                                 <div class="card-introduce">
@@ -118,7 +119,7 @@ possible.addEventListener("click", () => {
     other.classList.remove("all");
 
     var xhr = new XMLHttpRequest();
-    var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
     queryParams += '&pageNo=' + pageNo; /**/
     queryParams += '&numOfRows=' + itemCountPerPage; /**/
@@ -144,10 +145,11 @@ possible.addEventListener("click", () => {
 
         for (let i = 0; i < items.length; i++) {
             let imgSrc = items[i]["filePath"];
+            let state = stateCd2Str(items[i]["adoptionStatusCd"]);
             let str = `<div class="card" data-regid="${items[i]["regId"]}" onclick="goDetail()">
                             <div class="card-top">
                                 <img src="https://www.daejeon.go.kr/${imgSrc}" alt="">
-                                <div class="card-state"> ${stateCd2Str(items[i]["adoptionStatusCd"])} </div>
+                                <div class="card-state ${state.className}"> ${state.text} </div>
                             </div>
                             <div class="card-bottom">
                                 <div class="card-introduce">
@@ -179,7 +181,7 @@ dog.addEventListener("click", () => {
     other.classList.add("possible");
 
     var xhr = new XMLHttpRequest();
-    var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
     queryParams += '&pageNo=' + pageNo; /**/
     queryParams += '&numOfRows=' + itemCountPerPage; /**/
@@ -205,10 +207,11 @@ dog.addEventListener("click", () => {
 
         for (let i = 0; i < items.length; i++) {
             let imgSrc = items[i]["filePath"];
+            let state = stateCd2Str(items[i]["adoptionStatusCd"]);
             let str = `<div class="card" data-regid="${items[i]["regId"]}" onclick="goDetail()">
                             <div class="card-top">
                                 <img src="https://www.daejeon.go.kr/${imgSrc}" alt="">
-                                <div class="card-state"> ${stateCd2Str(items[i]["adoptionStatusCd"])} </div>
+                                <div class="card-state ${state.className}"> ${state.text} </div>
                             </div>
                             <div class="card-bottom">
                                 <div class="card-introduce">
@@ -240,7 +243,7 @@ cat.addEventListener("click", () => {
     other.classList.add("possible");
 
     var xhr = new XMLHttpRequest();
-    var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
     queryParams += '&pageNo=' + pageNo; /**/
     queryParams += '&numOfRows=' + itemCountPerPage; /**/
@@ -266,10 +269,11 @@ cat.addEventListener("click", () => {
 
         for (let i = 0; i < items.length; i++) {
             let imgSrc = items[i]["filePath"];
+            let state = stateCd2Str(items[i]["adoptionStatusCd"]);
             let str = `<div class="card" data-regid="${items[i]["regId"]}" onclick="goDetail()">
                             <div class="card-top">
                                 <img src="https://www.daejeon.go.kr/${imgSrc}" alt="">
-                                <div class="card-state"> ${stateCd2Str(items[i]["adoptionStatusCd"])} </div>
+                                <div class="card-state ${state.className}"> ${state.text} </div>
                             </div>
                             <div class="card-bottom">
                                 <div class="card-introduce">
@@ -301,7 +305,7 @@ other.addEventListener("click", () => {
     cat.classList.add("possible");
 
     var xhr = new XMLHttpRequest();
-    var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
     queryParams += '&pageNo=' + pageNo; /**/
     queryParams += '&numOfRows=' + itemCountPerPage; /**/
@@ -329,10 +333,11 @@ other.addEventListener("click", () => {
 
         for (let i = 0; i < items.length; i++) {
             let imgSrc = items[i]["filePath"];
+            let state = stateCd2Str(items[i]["adoptionStatusCd"]);
             let str = `<div class="card" data-regid="${items[i]["regId"]}" onclick="goDetail()">
                             <div class="card-top">
                                 <img src="https://www.daejeon.go.kr/${imgSrc}" alt="">
-                                <div class="card-state"> ${stateCd2Str(items[i]["adoptionStatusCd"])} </div>
+                                <div class="card-state ${state.className}"> ${state.text} </div>
                             </div>
                             <div class="card-bottom">
                                 <div class="card-introduce">
@@ -351,16 +356,10 @@ other.addEventListener("click", () => {
     xhr.send();
 });
 
-// function searchBtn() {
-//     sendAjax();
-// }
-
 function goPage(no) {
     console.log(no);
 
-    pageNo++;
-
-    currentPage = no;
+    pageNo = no;
 
     drawPage();
 
@@ -368,7 +367,7 @@ function goPage(no) {
 }
 
 function drawPage() {
-    let startPage = Math.floor((currentPage - 1) / 10) * 10 + 1;
+    let startPage = Math.floor((pageNo - 1) / 10) * 10 + 1;
     let lastPage = startPage + 9;
 
     if (lastPage > finalPage) {
@@ -384,7 +383,7 @@ function drawPage() {
     for (let i = startPage; i <= lastPage; i++) {
         let str = `<a href="javascript:goPage(${i})"> ${i} </a>`
 
-        if (i == currentPage) {
+        if (i == pageNo) {
             str = `<a href="#" class="active"> ${i} </a>`;
         }
 
@@ -393,24 +392,23 @@ function drawPage() {
 
     pagingBox.innerHTML += `<a class="first-page" href="javascript:next()"> &gt; </a>`;
 
-    pagingBox.innerHTML += `<a class="first-page" href="javascript:goLast()" title="마지막 페이지"> &gt;&gt; </a>`;
+    pagingBox.innerHTML += `<a class="first-page" href="javascript:goLast()"> &gt;&gt; </a>`;
 }
 
 function next() {
-    currentPage = Math.floor((currentPage - 1) / 10) * 10 + 11;
+    pageNo = Math.floor((pageNo - 1) / 10) * 10 + 11;
 
     drawPage();
 
     sendAjax();
 
-    // pageNo++;
 }
 
 function previous() {
-    if (currentPage <= 10) {
+    if (pageNo <= 10) {
         return;
     }
-    currentPage = Math.floor((currentPage - 1) / 10) * 10;
+    pageNo = Math.floor((pageNo - 1) / 10) * 10;
 
     drawPage();
 
@@ -418,21 +416,19 @@ function previous() {
 }
 
 function goLast() {
-    currentPage = finalPage;
+    pageNo = finalPage;
 
     drawPage();
 
     sendAjax();
-    // pageNo++;
 }
 
 function goFirst() {
-    currentPage = 1;
+    pageNo = 1;
 
     drawPage();
 
     sendAjax();
-    // pageNo++;
 }
 
 function goDetail() {
@@ -447,18 +443,43 @@ function goDetail() {
 document.get
 
 // 입양상태 코드에 따른 문자열값 리턴
+// function stateCd2Str(cd) {
+//     if (cd == 1) {
+//         return "공고중";
+//     } else if (cd == 2) {
+//         return "입양가능";
+//     } else if (cd == 3) {
+//         return "입양예정";
+//     } else if (cd == 4) {
+//         return "입양완료";
+//     } else {
+//         return "주인반환";
+//     }
+// }
+
 function stateCd2Str(cd) {
+    let stateText = '';
+    let stateClass = '';
+
     if (cd == 1) {
-        return "공고중";
+        stateText = "공고중";
+        stateClass = "announcement"; // 상태에 따른 클래스명
     } else if (cd == 2) {
-        return "입양가능";
+        stateText = "입양가능";
+        stateClass = "adoptable";
     } else if (cd == 3) {
-        return "입양예정";
+        stateText = "입양예정";
+        stateClass = "pending";
     } else if (cd == 4) {
-        return "입양완료";
+        stateText = "입양완료";
+        stateClass = "adopted";
     } else {
-        return "주인반환";
+        stateText = "주인반환";
+        stateClass = "returned";
     }
+
+    // card-state에 상태 클래스 추가
+    return { text: stateText, className: stateClass };
 }
 
 function classification(classification) {
@@ -471,4 +492,54 @@ function classification(classification) {
     }
 }
 
+let animalArray = [];
+document.getElementById("downloadEXCEL").addEventListener("click", () => {
+    var xhr = new XMLHttpRequest();
 
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
+
+    var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
+    queryParams += '&numOfRows=10000'; /**/
+    queryParams += '&pageNo=' + pageNo; /**/
+
+    xhr.open('GET', url + queryParams);
+
+    xhr.onload = function () {
+        let x2js = new X2JS();
+        let json = x2js.xml_str2json(xhr.response);
+        console.log(json);
+
+        let items = json["ServiceResult"]["MsgBody"]["items"];
+
+        console.log(items);
+
+        for (let i = 0; i < items.length; i++) {
+            let Array = {};
+            Array["종"] = items[i]["species"];
+            Array["성별"] = gender(items[i]["gender"]);
+            Array["관리번호"] = items[i]["regId"];
+            animalArray.push(Array);
+        }
+        console.log(animalArray);
+
+        let sheet = XLSX.utils.json_to_sheet(animalArray);
+    
+        let excel = XLSX.utils.book_new();
+    
+        XLSX.utils.book_append_sheet(excel, sheet, "animal");
+    
+        XLSX.writeFile(excel, "animalall.xlsx");
+    }
+    xhr.send();
+
+});
+
+function gender(cd) {
+    if(cd == 1) {
+        return "암컷";
+    } else if(cd == 2) {
+        return "수컷";
+    } else {
+        return "미상";
+    }
+}

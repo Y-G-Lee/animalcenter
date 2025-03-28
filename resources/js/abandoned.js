@@ -6,7 +6,7 @@ let finalPage;
 function sendAjax() {
     var xhr = new XMLHttpRequest();
 
-    var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
 
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
     queryParams += '&numOfRows=100'; /**/
@@ -31,7 +31,7 @@ function sendAjax() {
             for (let i = 0; i < items.length; i++) {
                 allItemArray.push(items[i]);
             }
-            
+
             pageNo++;
 
             sendAjax();
@@ -104,9 +104,9 @@ function statics() {
             height: 500
         }
     });
-    
+
     const pie = document.getElementById("pieChart");
-    
+
     new Chart(pie, {
         type: 'pie',
         data: {
