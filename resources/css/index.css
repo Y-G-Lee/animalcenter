@@ -168,7 +168,7 @@
     position: absolute;
     top: 92%;
     left: 58.5%;
-    /* transform: translate(-50%, 50%); */
+    transform: translate(10%, 10%);
 }
 
 .box-middle {
@@ -213,4 +213,5 @@
     position: absolute;
     top: 92%;
     left: 78%;
+    transform: translate(10%, 10%);
 }
