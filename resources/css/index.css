@@ -28,7 +28,7 @@
     height: 100%;
 }
 
-.card-img:hover {
+.card-top:hover {
     transform: scale(120%);
     cursor: pointer;
 }
