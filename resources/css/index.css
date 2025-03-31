@@ -29,7 +29,7 @@
 }
 
 .card-img:hover {
-    transform: scale(100%);
+    transform: scale(120%);
     cursor: pointer;
 }
 
