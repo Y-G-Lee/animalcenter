@@ -6,19 +6,17 @@ let totalPage;
 
 let finalPage;
 
+
 let possible = document.getElementById("possible");
 let dog = document.getElementById("dog");
 let cat = document.getElementById("cat");
 let other = document.getElementById("other");
-
 function sendAjax() {
     const $inputSearch = document.getElementById("inputSearch");
     const $type = document.getElementById('type');
     const $situation = document.getElementById("situation");
     const $area = document.getElementById("area");
     const $gender = document.getElementById("gender");
-
-
 
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -103,6 +101,7 @@ document.getElementById("all").addEventListener("click", () => {
     cat.classList.remove("all");
     other.classList.add("possible");
     other.classList.remove("all");
+    pageNo = 1;
     sendAjax();
 });
 
@@ -117,6 +116,8 @@ possible.addEventListener("click", () => {
     cat.classList.remove("all");
     other.classList.add("possible");
     other.classList.remove("all");
+
+    pageNo = 1;
 
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -180,6 +181,8 @@ dog.addEventListener("click", () => {
     other.classList.remove("all");
     other.classList.add("possible");
 
+    pageNo = 1;
+
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
@@ -241,6 +244,8 @@ cat.addEventListener("click", () => {
     dog.classList.add("possible");
     other.classList.remove("all");
     other.classList.add("possible");
+
+    pageNo = 1;
 
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -304,12 +309,14 @@ other.addEventListener("click", () => {
     cat.classList.remove("all");
     cat.classList.add("possible");
 
+    pageNo = 1;
+
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
     var queryParams = '?serviceKey=t1q4uVl99uUv%2FIc7a3gDPKQo7l96iCv8seIC%2FwiO%2F6JqJtPvp8gJKNouyrMkqYPGoVxZGjsBOU5LP78ZLe9rAQ%3D%3D'; /*Service Key*/
+    queryParams += '&searchCondition=3';
     queryParams += '&pageNo=' + pageNo; /**/
     queryParams += '&numOfRows=' + itemCountPerPage; /**/
-    queryParams += '&searchCondition=3';
 
     console.log(queryParams);
 
