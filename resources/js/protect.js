@@ -91,6 +91,7 @@ function sendAjax() {
 sendAjax();
 
 document.getElementById("all").addEventListener("click", () => {
+    pageNo = 1;
     document.getElementById("all").classList.add("all");
     document.getElementById("all").classList.remove("possible");
     possible.classList.add("possible");
@@ -101,11 +102,11 @@ document.getElementById("all").addEventListener("click", () => {
     cat.classList.remove("all");
     other.classList.add("possible");
     other.classList.remove("all");
-    pageNo = 1;
     sendAjax();
 });
 
 possible.addEventListener("click", () => {
+    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     possible.classList.remove("possible");
@@ -116,8 +117,6 @@ possible.addEventListener("click", () => {
     cat.classList.remove("all");
     other.classList.add("possible");
     other.classList.remove("all");
-
-    pageNo = 1;
 
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -170,6 +169,7 @@ possible.addEventListener("click", () => {
 });
 
 dog.addEventListener("click", () => {
+    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     dog.classList.remove("possible");
@@ -180,8 +180,6 @@ dog.addEventListener("click", () => {
     cat.classList.add("possible");
     other.classList.remove("all");
     other.classList.add("possible");
-
-    pageNo = 1;
 
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -234,6 +232,7 @@ dog.addEventListener("click", () => {
 });
 
 cat.addEventListener("click", () => {
+    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     cat.classList.remove("possible");
@@ -244,8 +243,6 @@ cat.addEventListener("click", () => {
     dog.classList.add("possible");
     other.classList.remove("all");
     other.classList.add("possible");
-
-    pageNo = 1;
 
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -298,6 +295,7 @@ cat.addEventListener("click", () => {
 });
 
 other.addEventListener("click", () => {
+    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     other.classList.remove("possible");
@@ -308,8 +306,6 @@ other.addEventListener("click", () => {
     dog.classList.add("possible");
     cat.classList.remove("all");
     cat.classList.add("possible");
-
-    pageNo = 1;
 
     var xhr = new XMLHttpRequest();
     var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
@@ -489,16 +485,6 @@ function stateCd2Str(cd) {
     return { text: stateText, className: stateClass };
 }
 
-function classification(classification) {
-    if (classification == 1) {
-        return "개";
-    } else if (classification == 2) {
-        return "고양이";
-    } else if (classification == 3) {
-        return "기타";
-    }
-}
-
 let animalArray = [];
 document.getElementById("downloadEXCEL").addEventListener("click", () => {
     var xhr = new XMLHttpRequest();
@@ -522,9 +508,17 @@ document.getElementById("downloadEXCEL").addEventListener("click", () => {
 
         for (let i = 0; i < items.length; i++) {
             let Array = {};
+            Array["게시물 번호"] = items[i]["animalSeq"];
+            Array["동물구분"] = classification(items[i]["classification"]);
+            Array["나이"] = items[i]["age"];
             Array["종"] = items[i]["species"];
             Array["성별"] = gender(items[i]["gender"]);
+            Array["색깔"] = items[i]["hairColor"];
+            Array["몸무게"] = items[i]["weight"];
             Array["관리번호"] = items[i]["regId"];
+            Array["구"] = gu(items[i]["gu"]);
+            Array["발견장소"] = items[i]["foundPlace"];
+
             animalArray.push(Array);
         }
         console.log(animalArray);
@@ -535,11 +529,22 @@ document.getElementById("downloadEXCEL").addEventListener("click", () => {
     
         XLSX.utils.book_append_sheet(excel, sheet, "animal");
     
-        XLSX.writeFile(excel, "animalall.xlsx");
+        XLSX.writeFile(excel, "animall.xlsx");
     }
     xhr.send();
 
 });
+
+function classification(classification) {
+    if (classification == 1) {
+        return "개";
+    } else if (classification == 2) {
+        return "고양이";
+    } else if (classification == 3) {
+        return "기타";
+    }
+}
+
 
 function gender(cd) {
     if(cd == 1) {
@@ -548,5 +553,19 @@ function gender(cd) {
         return "수컷";
     } else {
         return "미상";
+    }
+}
+
+function gu(cd) {
+    if(cd == 1) {
+        return "동구";
+    } else if(cd == 2) {
+        return "중구";
+    } else if(cd == 3) {
+        return "서구";
+    } else if(cd == 4) {
+        return "유성구";
+    } else {
+        return "대덕구";
     }
 }
