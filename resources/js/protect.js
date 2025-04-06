@@ -91,7 +91,6 @@ function sendAjax() {
 sendAjax();
 
 document.getElementById("all").addEventListener("click", () => {
-    pageNo = 1;
     document.getElementById("all").classList.add("all");
     document.getElementById("all").classList.remove("possible");
     possible.classList.add("possible");
@@ -106,7 +105,6 @@ document.getElementById("all").addEventListener("click", () => {
 });
 
 possible.addEventListener("click", () => {
-    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     possible.classList.remove("possible");
@@ -169,7 +167,6 @@ possible.addEventListener("click", () => {
 });
 
 dog.addEventListener("click", () => {
-    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     dog.classList.remove("possible");
@@ -232,7 +229,6 @@ dog.addEventListener("click", () => {
 });
 
 cat.addEventListener("click", () => {
-    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     cat.classList.remove("possible");
@@ -295,7 +291,6 @@ cat.addEventListener("click", () => {
 });
 
 other.addEventListener("click", () => {
-    pageNo = 1;
     document.getElementById("all").classList.remove("all");
     document.getElementById("all").classList.add("possible");
     other.classList.remove("possible");
