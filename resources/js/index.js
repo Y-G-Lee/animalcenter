@@ -16,7 +16,7 @@ xhr.onload = function () {
     let items = json["ServiceResult"]["MsgBody"]["items"];
 
     for(let i = 0; i < items.length; i++) {
-        let str = `<div class="card" data-reg-id="${items[i]["regId"]}">
+        let str = `<div class="card" data-reg-id="${items[i]["regId"]}" onclick="goDetail()">
                         <div class="card-top">
                             <img class="card-img" src="https://www.daejeon.go.kr/${items[i]["filePath"]}" alt="">
                             <div class="card-state"> ${stateCd2Str(items[i]["adoptionStatusCd"])} </div>
@@ -27,6 +27,7 @@ xhr.onload = function () {
                         </div>
                     </div>`;
                     document.querySelector(".card-box").innerHTML += str;
+                    console.log(items[i]["regId"]);
     }
 
 };
@@ -46,4 +47,13 @@ function stateCd2Str(cd) {
     } else {
         return "주인반환";
     }
+}
+
+function goDetail() {
+    console.log(event.currentTarget);
+    console.log(event.currentTarget.dataset);
+    let regId = event.currentTarget.dataset["regId"];
+    console.log(regId);
+
+    location.href = "./detail.html?regId=" + regId;
 }

@@ -63,9 +63,14 @@
     border: 1px solid #777777;
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
     padding: 30px;
     margin-top: 50px;
+}
+
+.left-center{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
 }
 
 .phone {
@@ -94,11 +99,8 @@
 
 .line {
     border-left: thin solid #777777;
-    height: 200px;
-    position: absolute;
-    top: 90%;
-    left: 22%;
-    
+    height: 250px;
+    margin-top: 55px;
 }
 
 .volunteer {
@@ -155,6 +157,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background-color: #FBF4EC;
     height: 50px;
 }
@@ -166,9 +169,9 @@
     font-weight: bold;
     border-radius: 100px;
     position: absolute;
-    top: 92%;
+    top: 17%;
     left: 58.5%;
-    transform: translate(10%, 10%);
+    transform: translate(15%, 10%);
 }
 
 .box-middle {
@@ -211,7 +214,7 @@
     font-weight: bold;
     border-radius: 100px;
     position: absolute;
-    top: 92%;
-    left: 78%;
+    top: 17%;
+    left: 61%;
     transform: translate(10%, 10%);
 }
